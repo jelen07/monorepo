@@ -1,0 +1,6 @@
+{
+  "name": "nextgen/core",
+  "require": {
+    "php": "^7.3"
+  }
+}
