@@ -1,0 +1,6 @@
+parameters:
+    package_directories:
+        - 'src'
+    directories_to_repositories:
+        src/Nextgen/Component/Core: 'git@github.com:jelen07/nextgen-core.git'
+        src/Nextgen/Component/Product: 'git@github.com:jelen07/nextgen-product.git'

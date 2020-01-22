@@ -2,5 +2,8 @@
   "name": "nextgen/nextgen",
   "require": {
     "php": "^7.3"
+  },
+  "require-dev": {
+    "symplify/monorepo-builder": "^7.2"
   }
 }
