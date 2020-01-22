@@ -4,13 +4,13 @@
 
 [Nextgen][1] eCommerce Platform on Symfony.
 
-# Installation
+## Installation
 
-# Documentation
+## Documentation
 
-# Contributing
+## Contributing
 
-# Issues
+## Issues
 
 # Monorepo
 
