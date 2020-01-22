@@ -1,9 +1,16 @@
 {
-  "name": "nextgen/nextgen",
-  "require": {
-    "php": "^7.3"
-  },
-  "require-dev": {
-    "symplify/monorepo-builder": "^7.2"
-  }
+    "name": "nextgen/nextgen",
+    "require": {
+        "ext-intl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "php": "^7.3"
+    },
+    "require-dev": {
+        "symplify/monorepo-builder": "^7.2"
+    },
+    "replace": {
+        "nextgen/core": "self.version",
+        "nextgen/product": "self.version"
+    }
 }

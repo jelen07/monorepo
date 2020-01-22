@@ -1,16 +1,90 @@
-# Nextgen/Nextgen
+<p align="center"><a href="https://www.oxyshop.cz" target="_blank">
+    <img src="https://symfony.com/logos/symfony_black_02.svg">
+</a></p>
+
+[Nextgen][1] eCommerce Platform on Symfony.
+
+# Installation
+
+# Documentation
+
+# Contributing
+
+# Issues
+
+# Monorepo
+
+All the Nextgen codebase in one place.
+
+## Repositories
+
+### Nextgen
+- [Nextgen Standard](#todo)
+- [Documentation](#todo)
+
+### Components
+- [Core](#todo)
+- [Channel](#todo)
+- [Product](#todo)
+- ...
+
+### Bundles
+- [CommonBundle](#todo)
+
+### DevOps
+- [Standard](#todo)
+
+### Packages (front-end)
+@todo
+
+### Plugins
+@todo
+
+### Themes
+@todo
+
+## About this monorepo
+
+### [Split.sh](https://github.com/splitsh/lite)
+Using for **splitting monorepo** to the stand-alone repositories.
+
+:warning: At the moment we're using bash script [`releaser`](./releaser) which using `split.sh` internally.
+
+```bash
+$ ./release
+```
+
+### [symplify/monorepo-builder](https://github.com/Symplify/Symplify)
+Mainly used for validation and composer.json manipulation of repositories.
+
+:warning: Never use **monorepo-builder** to split or release.
+
+```bash
+# Validates synchronized versions in "composer.json" in all found packages
+$ vendor/bin/monorepo-builder validate
+
+# Merge "composer.json" from all found packages to root one
+$ vendor/bin/monorepo-builder merge
+
+# Propagate versions from root "composer.json" to all packages, the opposite of "merge" command
+$ vendor/bin/monorepo-builder propagate
+
+# Updates branch alias in "composer.json" all found packages
+$ vendor/bin/monorepo-builder package-alias
+```
 
 ## Todos
 - Test split.sh
-- Is possible to split to the multiple groups and repositories?
+- Is possible to split to the multiple groups and repositories? => Yes
 - Add one extra namespace the `Oxyshop` before `Nextgen`.
 - Should the plugins be stored within this monorepo?
     - What about packages (front-end components)?
-    - Where projects should be stored?
     - What about templates (themes)?
     - And DevOps?
-    - Standard will be moved to the DevOps group.
-- `Nextgen/Nextgen-Standard` could be ib monorepo too. ATM it is separated.
+    - Where projects should be stored?
+- Standard will be moved to the DevOps group
+- `Nextgen/Nextgen-Standard` could be in monorepo too. ATM it is in separated repo.
+- Docs is in the separated repository, see the [docs](https://docs.nextgen.oxydev.cz).
 
 ### Workflow
 - Releasing new versions
@@ -22,9 +96,6 @@ See the blog post [How to test monorepo in 3 layers](https://www.tomasvotruba.co
 - Testing Monorepo (like Symfony, Sylius)
 - Testing Standalone Packages in Monorepo (like Symfony, Sylius)
 - After Split Testing
-
-## Docs
-Will be in the separated repository, see the [docs](https://docs.nextgen.oxydev.cz).
 
 ## Releasing new versions
 1. Do some checks (clean repo, ...)
@@ -38,3 +109,5 @@ Will be in the separated repository, see the [docs](https://docs.nextgen.oxydev.
     - Check again (all the commits, all the tags, ...)
     - Update dev versions and push them (`Kernel.php`)
 1. Release (Create GitHub release, publish blog post, tweet release, send notifications)
+
+[1]: https://test-test.digital24.oxydev.cz/

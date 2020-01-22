@@ -1,0 +1,7 @@
+{
+    "name": "nextgen/product",
+    "require": {
+        "ext-mbstring": "*",
+        "php": "^7.3"
+    }
+}

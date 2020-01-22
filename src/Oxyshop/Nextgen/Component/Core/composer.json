@@ -1,6 +1,8 @@
 {
     "name": "nextgen/core",
     "require": {
+        "ext-json": "*",
+        "ext-intl": "*",
         "php": "^7.3"
     }
 }
